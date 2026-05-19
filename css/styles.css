@@ -1,0 +1,675 @@
+/* 
+    Theme: Modern Industrial / Corporate Tech
+    Colors: Deep Navy Blue (#0B1D35), Stark White, Gold (#D4AF37)
+*/
+
+:root {
+    --primary-color: #0B1D35;
+    --secondary-color: #112A4F;
+    --accent-gold: #D4AF37;
+    --accent-gold-hover: #F1CA58;
+    --accent-red: #E31E24;
+    --text-main: #333333;
+    --text-light: #F5F5F5;
+    --white: #FFFFFF;
+    --bg-light: #FAFAFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* Typography Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.gold-text {
+    color: var(--accent-gold);
+}
+
+/* Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-gold);
+    color: var(--primary-color);
+    padding: 14px 28px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-outline-gold {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-gold);
+    padding: 12px 24px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid var(--accent-gold);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-color);
+}
+
+/* Navigation */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.4s ease;
+}
+
+#navbar.scrolled {
+    background: rgba(11, 29, 53, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    /* Professional spacing between icon and text */
+}
+
+.logo-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    width: clamp(56px, 5.5vw, 87px);
+    /* Default 70px (100%). Min 80% (56px), Max 125% (87px) */
+}
+
+.logo-machine {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-text-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.white-filter {
+    filter: brightness(0) invert(1);
+}
+
+.logo-text {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    /* Prevent text wrapping to a second line */
+}
+
+.highlight-red {
+    color: var(--accent-red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.nav-links .btn-nav {
+    border: 1px solid var(--accent-gold);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: var(--accent-gold);
+}
+
+.nav-links .btn-nav:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-color);
+}
+
+/* Mobile Menu (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background-image: url('../hero-bg.png');
+    /* Placeholder image from assets */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(11, 29, 53, 0.9) 0%, rgba(11, 29, 53, 0.6) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-headline {
+    color: var(--white);
+    font-size: clamp(2.8rem, 3.5vw, 4.375rem);
+    /* Default 3.5rem (100%). Min 80% (2.8rem), Max 125% (4.375rem) */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.highlight-gold {
+    color: var(--accent-gold);
+}
+
+.hero-subheadline {
+    color: var(--text-light);
+    font-size: clamp(0.96rem, 1.2vw, 1.5rem);
+    /* Default 1.2rem (100%). Min 80% (0.96rem), Max 125% (1.5rem) */
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Section Common */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.title-underline {
+    height: 4px;
+    width: 60px;
+    background-color: var(--accent-gold);
+    margin-bottom: 30px;
+}
+
+.title-underline.center {
+    margin: 0 auto 40px auto;
+}
+
+/* Legacy Section */
+.legacy {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.legacy-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.legacy-text-block {
+    flex: 1;
+}
+
+.legacy-text {
+    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.legacy-text strong {
+    color: var(--primary-color);
+}
+
+.legacy-logo-container {
+    width: 250px;
+    padding: 30px;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.felix-heritage-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Brand Showcase Section */
+.brand-showcase {
+    padding: 100px 0;
+    background-color: var(--primary-color);
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.brand-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 30px;
+    /* Reduced from 40px to restore compact feel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.brand-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Level 1: Kobird (Large, takes full width) */
+.brand-card.level-1 {
+    grid-column: 1 / -1;
+    border-top: none;
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(17, 45, 78, 0.85) 100%), url('../kobird_background.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.brand-card.level-1::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.brand-logo-wrapper {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.brand-card.level-1 .brand-logo-wrapper {
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.brand-logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    display: block;
+    object-fit: contain;
+}
+
+.brand-card.level-1 .brand-logo-img {
+    max-height: 160px;
+    max-width: 500px;
+}
+
+/* Secondary Brands (Sanko, Aicoh, Diosna, Trima) */
+.brand-name {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.brand-tagline {
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.brand-desc {
+    color: #A0B0C4;
+    line-height: 1.6;
+}
+
+.aicoh-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    height: 3rem;
+    /* Perfectly matches both logo and text height */
+}
+
+.aicoh-mark-img {
+    height: 3rem;
+    /* Now exactly matches the 3rem font size of AICOH */
+    width: auto;
+    flex-shrink: 0;
+}
+
+.aicoh-name {
+    font-size: 3rem;
+    color: #1A56C8;
+    margin-bottom: 0;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.aicoh-tagline {
+    color: #CBD5E1 !important;
+}
+
+.aicoh-red {
+    color: #CC0000;
+    font-weight: 700;
+}
+
+.sanko-logo {
+    height: 3rem;
+    max-height: none;
+    width: auto;
+}
+
+.card-sanko .brand-logo-wrapper {
+    height: 3rem;
+    /* match Aicoh header height */
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-sub {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    background-color: var(--white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-logo .logo-stack {
+    gap: 4px;
+    width: clamp(56px, 5.5vw, 87px);
+    /* Matches header size exactly */
+}
+
+.footer-logo .logo-machine {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-logo .logo-text-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    color: #A0B0C4;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    text-align: right;
+}
+
+.footer-links p {
+    color: #A0B0C4;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .logo-icon {
+        width: auto;
+        height: 100px;
+        margin: -25px -75px;
+    }
+
+    .hero {
+        align-items: flex-start;
+        padding-top: 150px;
+        /* Safe space below fixed navbar */
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .brand-card.level-1 {
+        padding: 60px 20px;
+    }
+
+    .brand-card.level-1 .brand-name {
+        font-size: 2.5rem;
+    }
+}
+
+/* Height-based media query for high zoom levels (e.g. 200%-250% zoom) */
+@media (max-height: 650px) {
+    .hero {
+        align-items: flex-start;
+        padding-top: 150px;
+        /* Push content down safely below fixed navbar */
+    }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=1.25">
+    <title>Zapnova Energy Tech | Smart Food Automation Solutions</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Zen+Dots&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">
+                    <div class="logo-stack">
+                        <img src="Zapnova_logo_final.png" alt="Zapnova Machine" class="logo-machine">
+                        <img src="Zapnova_text_final.png" alt="Zapnova Text" class="logo-text-img">
+                    </div>
+                    <span class="logo-text">Zapnova Energy Tech</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#heritage">Heritage</a></li>
+                <li><a href="#brands">Brands</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <!-- We use an image placeholder from the provided assets for the hero background -->
+        <div class="hero-content">
+            <h1 class="hero-headline">Precision in Every Layer.<br><span class="highlight-gold">Excellence in Every
+                    Batch.</span></h1>
+            <p class="hero-subheadline">Smart Food Automation Solutions</p>
+            <a href="#brands" class="btn-primary">Explore Our Brands</a>
+        </div>
+    </header>
+
+    <!-- Legacy Section -->
+    <section id="heritage" class="legacy">
+        <div class="container">
+            <div class="legacy-content-wrapper">
+                <div class="legacy-text-block">
+                    <h2 class="section-title">30+ Years of Bakery Heritage</h2>
+                    <div class="title-underline"></div>
+                    <p class="legacy-text">
+                        Powered by the decades of experience from <strong>Felix MJC Sdn. Bhd.</strong>, Zapnova Energy
+                        Tech bridges
+                        traditional craftsmanship with world-class smart automation. We engineer solutions that empower
+                        industrial food manufacturers and high-end artisanal bakeries to scale without compromise.
+                    </p>
+                </div>
+                <div class="legacy-logo-container">
+                    <img src="felix_logo_clean.png" alt="Felix Heritage Logo" class="felix-heritage-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase Section -->
+    <section id="brands" class="brand-showcase">
+        <div class="container">
+            <h2 class="section-title text-center text-white">Our Premium Brands</h2>
+            <div class="title-underline center"></div>
+
+            <div class="brands-grid">
+
+                <!-- Level 1: Kobird -->
+                <div class="brand-card level-1 card-kobird">
+                    <div class="card-content">
+                        <div class="brand-logo-wrapper">
+                            <img src="kobird_logo_gold.png" alt="Kobird Logo" class="brand-logo-img">
+                        </div>
+                        <p class="brand-tagline">The Gold Standard of Encrusting</p>
+                        <p class="brand-desc">Since 1894, Kobird has redefined food automation through meticulous
+                            craftsmanship, delivering artisanal quality results at industrial scale with superior
+                            technology.</p>
+                        <div class="brand-cta">
+                            <a href="https://kobird.co.jp/" target="_blank" class="btn btn-outline-gold">Explore the
+                                Technology</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 2: Sanko -->
+                <div class="brand-card card-sanko" data-aos="fade-up">
+                    <div class="card-content">
+                        <div class="brand-logo-wrapper">
+                            <img src="sanko_logo_cropped.png" alt="Sanko Logo" class="brand-logo-img sanko-logo">
+                        </div>
+                        <p class="brand-tagline">Precision Heating & Cooling</p>
+                        <p class="brand-desc">Japanese industry leader in thermal solutions and automated baking
+                            systems, ensuring consistent quality through advanced thermal engineering.</p>
+                    </div>
+                </div>
+
+                <!-- Level 2: Aicoh -->
+                <div class="brand-card card-aicoh" data-aos="fade-up">
+                    <div class="card-content">
+                        <div class="aicoh-logo-row">
+                            <img src="aicoh_mark_cropped.png" alt="Aicoh Mark" class="aicoh-mark-img">
+                            <h3 class="brand-name aicoh-name">AICOH</h3>
+                        </div>
+                        <p class="brand-tagline aicoh-tagline"><span class="aicoh-red">C</span>reative <span class="aicoh-red">A</span>icoh <span class="aicoh-red">P</span>roducts</p>
+                        <p class="brand-desc">Innovative Japanese bakery machinery specializing in planetary and spiral
+                            mixing technology for superior dough preparation.</p>
+                    </div>
+                </div>
+
+                <!-- Level 3: Diosna -->
+                <div class="brand-card card-diosna" data-aos="fade-up">
+                    <div class="card-content">
+                        <h3 class="brand-name">Diosna</h3>
+                        <p class="brand-tagline">Dough Production Specialists</p>
+                        <p class="brand-desc">German market leader in kneading technology and biotechnology, providing
+                            comprehensive solutions for optimal dough quality and flavor.</p>
+                    </div>
+                </div>
+
+                <!-- Level 3: Trima -->
+                <div class="brand-card card-trima" data-aos="fade-up">
+                    <div class="card-content">
+                        <h3 class="brand-name">Trima</h3>
+                        <p class="brand-tagline">Modular Dough Processing</p>
+                        <p class="brand-desc">Renowned German manufacturer of precise dough dividing, rounding, and
+                            shaping systems designed to replicate artisanal precision at scale.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title text-center">Ready to Elevate Your Production?</h2>
+                <p class="text-center cta-sub">Partner with Zapnova Energy Tech for smart food automation solutions.</p>
+
+                <div class="form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Corporate Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Request Technical Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-stack">
+                        <img src="Zapnova_logo_final.png" alt="Zapnova Machine" class="logo-machine">
+                        <img src="Zapnova_text_final.png" alt="Zapnova Text" class="logo-text-img">
+                    </div>
+                    <h3>Zapnova Energy Tech</h3>
+                </div>
+                <p>Smart Food Automation Solutions</p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2026 Zapnova Energy Tech Pte Ltd. All rights reserved.</p>
+                <p>Bridging traditional craftsmanship with smart automation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
