@@ -678,7 +678,21 @@ footer {
     }
 
     .brand-card.level-1 {
-        padding: 60px 20px;
+        padding: 40px 20px;
+    }
+
+    .brand-card.level-1 .brand-logo-wrapper {
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .brand-card.level-1 .brand-logo-img {
+        max-width: 100%;
+        max-height: 80px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
     }
 
     .brand-card.level-1 .brand-name {
