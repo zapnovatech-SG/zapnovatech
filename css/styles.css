@@ -642,6 +642,16 @@ footer {
         font-size: 2.2rem;
     }
 
+    .legacy-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .title-underline {
+        margin: 0 auto 30px auto; /* center the underline on mobile */
+    }
+
     .brands-grid {
         grid-template-columns: 1fr;
     }
