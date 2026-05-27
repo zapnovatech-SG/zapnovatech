@@ -55,7 +55,8 @@ for ($x = 0; $x -lt $width; $x++) {
         # Set pixel to the base green with the new alpha
         if ($finalA -le 5) {
             $bmp.SetPixel($x, $y, [System.Drawing.Color]::FromArgb(0, 0, 0, 0))
-        } else {
+        }
+        else {
             $bmp.SetPixel($x, $y, [System.Drawing.Color]::FromArgb($finalA, $minR, $targetG, $targetB))
         }
     }

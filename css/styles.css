@@ -290,6 +290,12 @@ body {
     margin-bottom: 10px;
 }
 
+.heritage-title {
+    font-size: clamp(1.2rem, 2.4vw, 2.2rem);
+    white-space: nowrap;
+    letter-spacing: -0.5px;
+}
+
 .title-underline {
     height: 4px;
     width: 60px;
@@ -380,7 +386,7 @@ body {
     text-align: center;
     padding: 80px 40px;
     background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(17, 45, 78, 0.85) 100%), url('../kobird_background.png');
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -422,7 +428,7 @@ body {
 
 .brand-card.level-1 .brand-logo-img {
     max-height: 160px;
-    max-width: 500px;
+    max-width: min(500px, 80%);
 }
 
 /* Secondary Brands (Sanko, Aicoh, Diosna, Trima) */
@@ -646,6 +652,11 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+    }
+
+    .heritage-title {
+        white-space: normal;
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
     }
 
     .title-underline {
