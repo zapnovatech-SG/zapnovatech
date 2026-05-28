@@ -661,6 +661,19 @@ footer {
         display: flex;
     }
 
+    .logo {
+        flex: 1;
+    }
+
+    .logo a {
+        width: 100%;
+    }
+
+    .logo-text-container {
+        flex: 1;
+        margin-right: 15px; /* keep some breathing room from the hamburger */
+    }
+
     .logo-text {
         font-size: 1.1rem;
     }
