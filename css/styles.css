@@ -215,15 +215,31 @@ body {
 .hamburger {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
 }
 
 .hamburger .bar {
     display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
     background-color: var(--white);
+    border-radius: 3px;
     transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate hamburger to X when active */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -622,10 +638,27 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
     }
 
     .logo-text {
